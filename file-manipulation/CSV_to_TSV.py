@@ -1,11 +1,10 @@
 #----------------------------------------------------------------------#
-#                  Multi-Core CSV to TSV Converter                     #
+#                        CSV to TSV Converter                          #
 #----------------------------------------------------------------------#
 
 # Author: Monty Perrotti
 
-# In this program there will be use of as many cores as possible to
-# convert Comma Seperated Value files to Tab Seperated Value files.
+# In this program converts Comma Seperated Value files to Tab Seperated Value files.
 
 from time import perf_counter
 
