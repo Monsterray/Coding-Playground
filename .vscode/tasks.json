@@ -1,0 +1,29 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "C/C++: g++.exe build active file",   // This compiles the cpp file
+            "type": "shell",
+            "command": "g++",
+            "args": [
+                // Name of cpp file to be compiled.
+                "${relativeFile}",
+                "-o",
+                // Name of original file without its extention
+                "${workspaceFolder}\\bin\\${relativeFileDirname}\\${fileBasenameNoExtension}.exe"
+            ],
+            "group": {
+                "isDefault": true, 
+                "kind": "build"
+            },
+            "presentation": {
+                // Reveal the output only if unrecognized errors occur.
+                "reveal": "silent"
+            },
+            // Use the standard MS compiler pattern to detect errors, warnings and infos
+            "problemMatcher": "$msCompile"
+        }
+    ]
+}
