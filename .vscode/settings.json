@@ -1,6 +1,7 @@
 {
     "python.pythonPath": "C:\\Users\\Perrmon13\\AppData\\Local\\Microsoft\\WindowsApps\\python.exe",
     "files.associations": {
+        "*.py": "python",
         "array": "cpp",
         "atomic": "cpp",
         "bit": "cpp",
@@ -44,6 +45,12 @@
         "sstream": "cpp",
         "stdexcept": "cpp",
         "streambuf": "cpp",
-        "typeinfo": "cpp"
+        "typeinfo": "cpp",
+        "chrono": "cpp",
+        "ctime": "cpp",
+        "ratio": "cpp",
+        "bitset": "cpp",
+        "cstring": "cpp",
+        "map": "cpp"
     }
 }
