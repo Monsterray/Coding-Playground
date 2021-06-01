@@ -6,10 +6,12 @@ install C/C++ Extension for VSC
 install MinGW at https://sourceforge.net/projects/mingw/
 add gcc bin to PATH
 config VSC using https://code.visualstudio.com/docs/cpp/config-mingw
+config VSC launch.json using https://code.visualstudio.com/docs/cpp/launch-json-reference
 
 
 Notes:
 --**Variables Reference**--
+https://code.visualstudio.com/docs/editor/variables-reference
 A file located at /home/your-username/your-project/folder/file.ext opened in your editor;
 The directory /home/your-username/your-project opened as your root workspace.
 

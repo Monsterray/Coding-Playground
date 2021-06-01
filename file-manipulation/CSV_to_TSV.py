@@ -40,7 +40,7 @@ class csv_tsv:
 
 tStart = perf_counter() # Used to time this program
 
-converter = csv_tsv("defenderParts-Full.csv", "defenderParts-full.tsv")
+converter = csv_tsv("defenderParts-Full.csv", "defenderParts-Full.tsv")
 converter.run()
 tEnd = perf_counter()
 execution_time = (tEnd - tStart)
