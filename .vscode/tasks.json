@@ -24,6 +24,30 @@
             },
             // Use the standard MS compiler pattern to detect errors, warnings and infos
             "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "C/C++: g++.exe build active file with multithreading",   // This compiles the cpp file
+            "type": "shell",
+            "command": "g++",
+            "args": [
+                // Name of cpp file to be compiled.
+                "${relativeFile}",
+                "-o",
+                // Name of original file without its extention
+                "${workspaceFolder}\\bin\\${relativeFileDirname}\\${fileBasenameNoExtension}.exe",
+                "-std=c++11",
+                "-pthread"
+            ],
+            "group": {
+                "isDefault": true, 
+                "kind": "build"
+            },
+            "presentation": {
+                // Reveal the output only if unrecognized errors occur.
+                "reveal": "silent"
+            },
+            // Use the standard MS compiler pattern to detect errors, warnings and infos
+            "problemMatcher": "$msCompile"
         }
     ]
 }
