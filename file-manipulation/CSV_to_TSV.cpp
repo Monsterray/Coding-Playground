@@ -7,18 +7,11 @@
 
 #include <iostream>
 #include <fstream>
+#include <thread>
 
 #include <chrono>   // Just for timing
-class CSV_to_TSV{
+class CSV_to_TSV {
     public:
-        std::string inputFilePath;     // Path to the input file
-        std::string outputFilePath;    // Path to the output file
-
-        CSV_to_TSV(std::string inPath, std::string outPath)
-            : inputFilePath(inPath), outputFilePath(outPath)
-        {
-        }
-
         CSV_to_TSV()    // Default contructor
         {
         }
@@ -27,12 +20,18 @@ class CSV_to_TSV{
         {
         }
 
+        void operator()(std::string inPath, std::string outPath)
+        {
+            convertFiles(inPath, outPath);
+        }
+
         /**
             Converts a CSV file to a TSV file
             @param inPath string of the path to the input file
             @param outPath string of the path to the output file
         */
-        void convertFiles (std::string inPath, std::string outPath){
+        void convertFiles (std::string inPath, std::string outPath)
+        {
             std::ifstream inputFile;     // input CSV file
             std::ofstream outputFile;    // output TSV file
 
@@ -50,25 +49,31 @@ class CSV_to_TSV{
                 }
 
                 // Do replacement character by character
-                char ch; // Temporarily holds character of the file
+                // char ch; // Temporarily holds character of the file
                 
-                while ( !inputFile.eof() ) {
-                	// inputFile >> ch; // This way does not read new lines charachters
+                // while ( !inputFile.eof() ) {
+                // 	// inputFile >> ch; // This way does not read new lines charachters
 
-                    inputFile.get(ch);  // Trying to use different way to get new lines
-                    if ( ch == ',' )
-                        ch = '\t';
+                //     inputFile.get(ch);  // Trying to use different way to get new lines
+                //     if ( ch == ',' )
+                //         ch = '\t';
 
-                    outputFile << ch;
-                	// std::cout << ch;
-                }
-
-                // Do replacement line by line ( 2X slower then going character by character)
-                // std::string line;    // Temporarily holds a file line
-                // while (getline(inputFile, line)){
-                //     replaceAll(line, ",", "\t");
-                //     outputFile << line;
+                //     outputFile << ch;
+                // 	// std::cout << ch;
                 // }
+
+                // #1 Do replacement line by line ( 2X slower then going character by character)
+                // #2 Trying a new design by going through full lines by using position
+                // replacement on strings. IT WORKS! This new method is 2X faster then char by char.
+                std::string line;    // Temporarily holds a file line
+                while (getline(inputFile, line)){
+                    // replaceAll(line, ",", "\t"); // #1
+                    for ( int i = 0; i < line.length(); i++ ){
+                        if ( line[i] == ',' )
+                            line[i] = '\t';
+                    }
+                    outputFile << line;
+                }
 
             }
             inputFile.close();
