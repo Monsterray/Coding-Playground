@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "v3rRxZptQ9OcSSQKSE/xxJIhW0y61m+u8fmYYEg9zu9q6E3LRt96A6i/MSDCPszgzYaj50mQjdnq8AfedkLnDg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Perrmon13\\Documents\\Coding Playground\\F#-tutorial\\F#-tutorial.fsproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Perrmon13\\.nuget\\packages\\fsharp.core\\5.0.0\\fsharp.core.5.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

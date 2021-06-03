@@ -12,18 +12,10 @@
 #include <chrono>   // Just for timing
 class CSV_to_TSV {
     public:
-        CSV_to_TSV()    // Default contructor
-        {
-        }
+        CSV_to_TSV(){}    // Default contructor
 
-        ~CSV_to_TSV()   // Default destructor
-        {
-        }
+        ~CSV_to_TSV(){}   // Default destructor
 
-        void operator()(std::string inPath, std::string outPath)
-        {
-            convertFiles(inPath, outPath);
-        }
 
         /**
             Converts a CSV file to a TSV file
@@ -48,7 +40,7 @@ class CSV_to_TSV {
                     std::cout << "File created successfully!" << std::endl;
                 }
 
-                // Do replacement character by character
+                // Do replacement character by character. This is 2X slower then #2 line char by char.
                 // char ch; // Temporarily holds character of the file
                 
                 // while ( !inputFile.eof() ) {
