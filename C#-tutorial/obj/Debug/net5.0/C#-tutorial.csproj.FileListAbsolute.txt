@@ -1,0 +1,16 @@
+C:\Users\Perrmon13\Documents\Coding Playground\C#-tutorial\bin\Debug\net5.0\C#-tutorial.exe
+C:\Users\Perrmon13\Documents\Coding Playground\C#-tutorial\bin\Debug\net5.0\C#-tutorial.deps.json
+C:\Users\Perrmon13\Documents\Coding Playground\C#-tutorial\bin\Debug\net5.0\C#-tutorial.runtimeconfig.json
+C:\Users\Perrmon13\Documents\Coding Playground\C#-tutorial\bin\Debug\net5.0\C#-tutorial.runtimeconfig.dev.json
+C:\Users\Perrmon13\Documents\Coding Playground\C#-tutorial\bin\Debug\net5.0\C#-tutorial.dll
+C:\Users\Perrmon13\Documents\Coding Playground\C#-tutorial\bin\Debug\net5.0\ref\C#-tutorial.dll
+C:\Users\Perrmon13\Documents\Coding Playground\C#-tutorial\bin\Debug\net5.0\C#-tutorial.pdb
+C:\Users\Perrmon13\Documents\Coding Playground\C#-tutorial\obj\Debug\net5.0\C#-tutorial.csproj.AssemblyReference.cache
+C:\Users\Perrmon13\Documents\Coding Playground\C#-tutorial\obj\Debug\net5.0\C#-tutorial.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Perrmon13\Documents\Coding Playground\C#-tutorial\obj\Debug\net5.0\C#-tutorial.AssemblyInfoInputs.cache
+C:\Users\Perrmon13\Documents\Coding Playground\C#-tutorial\obj\Debug\net5.0\C#-tutorial.AssemblyInfo.cs
+C:\Users\Perrmon13\Documents\Coding Playground\C#-tutorial\obj\Debug\net5.0\C#-tutorial.csproj.CoreCompileInputs.cache
+C:\Users\Perrmon13\Documents\Coding Playground\C#-tutorial\obj\Debug\net5.0\C#-tutorial.dll
+C:\Users\Perrmon13\Documents\Coding Playground\C#-tutorial\obj\Debug\net5.0\ref\C#-tutorial.dll
+C:\Users\Perrmon13\Documents\Coding Playground\C#-tutorial\obj\Debug\net5.0\C#-tutorial.pdb
+C:\Users\Perrmon13\Documents\Coding Playground\C#-tutorial\obj\Debug\net5.0\C#-tutorial.genruntimeconfig.cache

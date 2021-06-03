@@ -1,2 +1,4 @@
 platform,time_to_calc
-python(windows),0.0158148
+python(windows),15814.8 microseconds
+c++ char(windows/gcc),91382 microseconds
+c++ line char(windows/gcc),41884 microseconds

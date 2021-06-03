@@ -4,7 +4,7 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "C/C++: g++.exe build active file",   // This compiles the cpp file
+            "label": "C/C++: g++.exe build active file", // This compiles the cpp file
             "type": "shell",
             "command": "g++",
             "args": [
@@ -15,7 +15,7 @@
                 "${workspaceFolder}\\bin\\${relativeFileDirname}\\${fileBasenameNoExtension}.exe"
             ],
             "group": {
-                "isDefault": true, 
+                "isDefault": true,
                 "kind": "build"
             },
             "presentation": {
@@ -26,7 +26,7 @@
             "problemMatcher": "$msCompile"
         },
         {
-            "label": "C/C++: g++.exe build active file with multithreading",   // This compiles the cpp file
+            "label": "C/C++: g++.exe build active file with multithreading", // This compiles the cpp file
             "type": "shell",
             "command": "g++",
             "args": [
@@ -38,16 +38,13 @@
                 "-std=c++11",
                 "-pthread"
             ],
-            "group": {
-                "isDefault": true, 
-                "kind": "build"
-            },
+            "group": "build",
             "presentation": {
                 // Reveal the output only if unrecognized errors occur.
                 "reveal": "silent"
             },
             // Use the standard MS compiler pattern to detect errors, warnings and infos
             "problemMatcher": "$msCompile"
-        }
+        },
     ]
 }
