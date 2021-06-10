@@ -3,19 +3,31 @@
  
     "name": "YT Playlist Grabber", 
     "description": "Pulls the links to all of the videos in a Youtube playlist.",
-    "version": "1.0",
+    "version": "1.1",
     "author": "Monty Perrotti",
+
+    "background": {
+        "scripts": [
+            "background.js"
+        ],
+        "persistent": false
+    },
     "content_scripts": [{
         "matches": ["https://www.youtube.com/*"],
         "js": ["lib/jquery-1.12.4.js", "retrieve.js"],
         "run_at": "document_end"
     }],
+    "web_accessible_resources": [
+        "inject-script.js"
+    ],
+
     "browser_action": {
         "default_icon": "icon.png",
         "default_popup": "popup.html",
         "default_title": "YT Playlist Grabber"
     },
     "permissions": [
-        "activeTab"
+        "activeTab",
+        "tabs"
      ]
 }

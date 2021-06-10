@@ -1,15 +1,24 @@
+
+
+function writeLinkstoPopup(item, index) {
+  var textnode = document.createTextNode(item);
+  document.appendChild(textnode);
+} 
+
 document.addEventListener('DOMContentLoaded', function() {
-    var checkPageButton = document.getElementById('clickIt');
-    checkPageButton.addEventListener('click', function() {
-  
-      // chrome.tabs.getSelected(null, function(tab) {
-      //   alert("Hello..! It's my first chrome extension.");
-      chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
-        chrome.tabs.sendMessage(tabs[0].id, {greeting: "hello"}, function(response) {
-          console.log(response.farewell);
-        });
-      });
+    var checkPageButton = document.getElementById('clickIt'); // Find button with ID 'clickIt'
+    checkPageButton.addEventListener('click', function() {    // Add a listener to wait for the button to be clicked
       
+      chrome.tabs.query({active: true, currentWindow: true}, function(tabs) { // Find the active tab
+        chrome.tabs.sendMessage(                              // Send a message to found tab
+          tabs[0].id, {message: "getLinks"},
+
+          function(response) {
+            console.log(response.farewell);
+          }
+        );
+      });
+
     }, false);
 
   }, false);
@@ -20,12 +29,7 @@ chrome.runtime.onMessage.addListener(
                 "from a content script:" + sender.tab.url :
                 "from the extension");
     
-    request.playlistLinks.forEach(myFunction);
+    request.linkArray.forEach(writeLinkstoPopup);
   }
 );
 
-
-
-function myFunction(item, index) {
-  console.log(item.attr('href'));
-} 
