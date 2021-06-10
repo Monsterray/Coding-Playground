@@ -1,1 +1,11 @@
 file-manipulation/example.cpp
+
+.fake
+.ionide
+C#-tutorial/bin/Debug/net5.0/C#-tutorial.dll
+C#-tutorial/bin/Debug/net5.0/C#-tutorial.pdb
+C#-tutorial/bin/Debug/net5.0/ref/C#-tutorial.dll
+C#-tutorial/obj/Debug/net5.0/C#-tutorial.assets.cache
+C#-tutorial/obj/Debug/net5.0/C#-tutorial.dll
+C#-tutorial/obj/Debug/net5.0/C#-tutorial.pdb
+C#-tutorial/obj/Debug/net5.0/ref/C#-tutorial.dll

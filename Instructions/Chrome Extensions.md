@@ -1,0 +1,2 @@
+https://developer.chrome.com/docs/extensions/reference/ // The documentation for extensions
+https://developer.chrome.com/docs/extensions/mv3/messaging/ // For passing messages between extension and content script

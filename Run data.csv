@@ -2,3 +2,4 @@ platform,time_to_calc
 python(windows),15814.8 microseconds
 c++ char(windows/gcc),91382 microseconds
 c++ line char(windows/gcc),41884 microseconds
+C#(Windows),9738 microseconds
