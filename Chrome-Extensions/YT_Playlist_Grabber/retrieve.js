@@ -23,17 +23,8 @@ chrome.runtime.onMessage.addListener(   // This is to recieve messages from the 
                 var anchor = linkElements[i].querySelector("#video-title");
                 links[i] = "https://www.youtube.com/" + anchor.getAttribute("href").substring(1, 20);
             }
-            sendResponse({linkArray: links});
+            // sendResponse({linkArray: links});
+            chrome.runtime.sendMessage({ linkArray: links });
         }
     }
 );
-
-chrome.runtime.sendMessage({linkArray: links}, 
-    function(response) {
-        console.log("[YT-P] Response message from retrieve.js");
-    }
-);
-
-
-// /watch?v=JGwWNGJdvx8&list=PLMC9KNkIncKtPzgY-5rmhvj7fax8fdxoj&index=1
-// /watch?v=JGwWNGJdvx8&list=PLMC9KNkIncKtPzgY-5rmhvj7fax8fdxoj&index=1
